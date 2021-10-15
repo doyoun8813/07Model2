@@ -122,6 +122,7 @@ public class ProductController {
 			session.setAttribute("history",changeHistoryArr);
 			Cookie cookie = new Cookie("history",changeHistoryArr);
 			cookie.setMaxAge(-1);
+			cookie.setPath("/");
 			response.addCookie(cookie);
 			System.out.println("쿠키 저장 완료");
 		}
