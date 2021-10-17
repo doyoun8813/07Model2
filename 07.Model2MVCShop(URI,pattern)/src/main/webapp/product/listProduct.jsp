@@ -195,7 +195,7 @@ function fncGetList(currentPage) {
 					<c:when test="${product.proTranCode=='1  '}">
 						구매완료
 						<c:if test="${param.menu =='manage' }">
-							<a href="/purchase/updateTranCodeByProd?prodNo=${product.prodNo}&tranCode=2&page=${ !empty param.page ? search.page : '' }">배송하기</a>
+							<a href="/purchase/updateTranCodeByProd?prodNo=${product.prodNo}&tranCode=2&page=${ !empty resultPage.currentPage ? search.currentPage : '' }">배송하기</a>
 				 		</c:if>
 					</c:when>
 					<c:when test="${product.proTranCode=='2  '}">
