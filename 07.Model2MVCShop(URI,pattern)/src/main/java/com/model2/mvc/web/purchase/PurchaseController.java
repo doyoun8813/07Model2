@@ -164,6 +164,11 @@ public class PurchaseController {
 		if(search.getCurrentPage() ==0 ){
 			search.setCurrentPage(1);
 		}
+		
+		if(request.getParameter("page") != null) {
+			search.setCurrentPage(Integer.parseInt(request.getParameter("page")));
+		}
+		
 		search.setPageSize(pageSize);
 		
 		User user = (User) session.getAttribute("user");
